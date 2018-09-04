@@ -33,6 +33,7 @@ txtEditor.oninput=(e)=>{
 
 //监听与主进程的通信
 ipcRenderer.on('action', (event, arg) => {
+    console.log('event:', event, 'arg:', arg);
     switch(arg){
     case 'new': //新建文件
         askSaveIfNeed();
